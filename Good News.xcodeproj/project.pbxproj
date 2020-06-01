@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		5259411622AB63020053CA3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5259411522AB63020053CA3F /* AppDelegate.swift */; };
-		5259411822AB63020053CA3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5259411722AB63020053CA3F /* ViewController.swift */; };
 		5259411B22AB63020053CA3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5259411922AB63020053CA3F /* Main.storyboard */; };
 		5259411D22AB63030053CA3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5259411C22AB63030053CA3F /* Assets.xcassets */; };
 		5259412022AB63030053CA3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5259411E22AB63030053CA3F /* LaunchScreen.storyboard */; };
+		5259412922AB63A90053CA3F /* NewsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5259412822AB63A90053CA3F /* NewsListTableViewController.swift */; };
+		5259412C22AB660C0053CA3F /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5259412B22AB660C0053CA3F /* Webservice.swift */; };
+		5259412F22AB68070053CA3F /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5259412E22AB68070053CA3F /* Article.swift */; };
+		5259413222AB69890053CA3F /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5259413122AB69890053CA3F /* ArticleViewModel.swift */; };
+		5259413522AB6F9F0053CA3F /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5259413422AB6F9F0053CA3F /* ArticleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5259411222AB63020053CA3F /* Good News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Good News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5259411522AB63020053CA3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5259411722AB63020053CA3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5259411A22AB63020053CA3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5259411C22AB63030053CA3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5259411F22AB63030053CA3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5259412122AB63030053CA3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5259412822AB63A90053CA3F /* NewsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewController.swift; sourceTree = "<group>"; };
+		5259412B22AB660C0053CA3F /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		5259412E22AB68070053CA3F /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		5259413122AB69890053CA3F /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		5259413422AB6F9F0053CA3F /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,58 @@
 		5259411422AB63020053CA3F /* Good News */ = {
 			isa = PBXGroup;
 			children = (
+				5259413322AB6F8A0053CA3F /* Cells */,
+				5259413022AB69700053CA3F /* View Models */,
+				5259412D22AB67F70053CA3F /* Models */,
+				5259412A22AB65F10053CA3F /* Services */,
+				5259412722AB638E0053CA3F /* Controllers */,
 				5259411522AB63020053CA3F /* AppDelegate.swift */,
-				5259411722AB63020053CA3F /* ViewController.swift */,
 				5259411922AB63020053CA3F /* Main.storyboard */,
 				5259411C22AB63030053CA3F /* Assets.xcassets */,
 				5259411E22AB63030053CA3F /* LaunchScreen.storyboard */,
 				5259412122AB63030053CA3F /* Info.plist */,
 			);
 			path = "Good News";
+			sourceTree = "<group>";
+		};
+		5259412722AB638E0053CA3F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5259412822AB63A90053CA3F /* NewsListTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5259412A22AB65F10053CA3F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5259412B22AB660C0053CA3F /* Webservice.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5259412D22AB67F70053CA3F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5259412E22AB68070053CA3F /* Article.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5259413022AB69700053CA3F /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				5259413122AB69890053CA3F /* ArticleViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		5259413322AB6F8A0053CA3F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5259413422AB6F9F0053CA3F /* ArticleTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5259411822AB63020053CA3F /* ViewController.swift in Sources */,
+				5259412F22AB68070053CA3F /* Article.swift in Sources */,
+				5259412922AB63A90053CA3F /* NewsListTableViewController.swift in Sources */,
 				5259411622AB63020053CA3F /* AppDelegate.swift in Sources */,
+				5259413222AB69890053CA3F /* ArticleViewModel.swift in Sources */,
+				5259413522AB6F9F0053CA3F /* ArticleTableViewCell.swift in Sources */,
+				5259412C22AB660C0053CA3F /* Webservice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +339,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UV2E9UFVZH;
 				INFOPLIST_FILE = "Good News/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +357,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UV2E9UFVZH;
 				INFOPLIST_FILE = "Good News/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
